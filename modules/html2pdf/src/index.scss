@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after,
+*::placeholder {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  box-sizing: border-box;
+}
+
+// .el-input__inner::placeholder {
+//   color: blue;
+// }
+
+// input {
+//   color: red;
+// }
+
+// input::placeholder {
+//   font-weight: bold;
+//   opacity: 0.5;
+//   color: blue;
+// }
+// input::placeholder {
+//   color: blue;
+// }
+
+// ::-webkit-input-placeholder {
+//   /* Chrome/Opera/Safari */
+//   color: blue;
+// }
+// ::-moz-placeholder {
+//   /* Firefox 19+ */
+//   color: blue;
+// }
+// :-ms-input-placeholder {
+//   /* IE 10+ */
+//   color: blue;
+// }
+// :-moz-placeholder {
+//   /* Firefox 18- */
+//   color: blue;
+// }
+
+@page {
+  size: auto;
+}

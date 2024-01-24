@@ -1,0 +1,80 @@
+{
+  "name": "print-pro",
+  "version": "0.0.2",
+  "main": "dist/print-pro.umd.min.js",
+  "author": "ame",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name print-pro ./modules/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "echarts": "^5.4.2",
+    "echarts-liquidfill": "^3.1.0",
+    "element-ui": "^2.15.14",
+    "html-to-image": "^1.11.11",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "print-js": "^1.6.0",
+    "qrcodejs2": "^0.0.2",
+    "sass": "^1.69.7",
+    "sass-loader": "^14.0.0",
+    "the-new-css-reset": "^1.11.2",
+    "vue": "^2.6.14",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "keywords": [
+    "vue",
+    "html2canvas",
+    "print-pro",
+    "html2pdf",
+    "element-ui"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimeiyijia/print-pro.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aimeiyijia/print-pro/issues"
+  },
+  "homepage": "https://github.com/aimeiyijia/print-pro#readme",
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "languageOptions": {
+      "globals": {
+        "define": "readonly"
+      }
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
