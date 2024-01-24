@@ -84,6 +84,7 @@ export default {
         new Print({
           // 支持传入文件id 或者直接传HtmlElement document.body
           element: "PrintContent",
+          title: "测试名称",
           previewBeforeOpenCallback: this.previewBeforeOpenCallback,
           previewOpenCallback: this.previewOpenCallback,
           beforeOpenCallback: this.beforeOpenCallback,

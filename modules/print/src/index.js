@@ -95,21 +95,24 @@ export default class Print {
     if (box) {
       let _this = this
       let iframe = box.querySelector("iframe")
-      this.settings.previewBeforeOpenCallback()
+      this.settings.previewBeforeOpenCallback &&
+        this.settings.previewBeforeOpenCallback()
       this.addEvent(iframe, "load", function () {
         _this.previewBoxShow()
         _this.removeCanvasImg()
-        _this.settings.previewOpenCallback()
+        _this.settings.previewOpenCallback &&
+          _this.settings.previewOpenCallback()
       })
 
       this.addEvent(
         box.querySelector(".previewBodyUtilPrintBtn"),
         "click",
         function () {
-          _this.settings.beforeOpenCallback()
-          _this.settings.openCallback()
+          _this.settings.beforeOpenCallback &&
+            _this.settings.beforeOpenCallback()
+          _this.settings.openCallback && _this.settings.openCallback()
           iframe.contentWindow.print()
-          _this.settings.closeCallback()
+          _this.settings.closeCallback && _this.settings.closeCallback()
         }
       )
     }
@@ -132,18 +135,19 @@ export default class Print {
   print(ifrmae) {
     var _this = this
     let iframe = document.getElementById(this.settings.id) || ifrmae.f
+    iframe.width = '200'
     let iframeWin =
       document.getElementById(this.settings.id).contentWindow ||
       ifrmae.f.contentWindow
     var _loaded = function () {
       iframeWin.focus()
-      _this.settings.openCallback()
+      _this.settings.openCallback && _this.settings.openCallback()
       iframeWin.print()
       isRemove(iframe)
-      _this.settings.closeCallback()
+      _this.settings.closeCallback && _this.settings.closeCallback()
       _this.removeCanvasImg()
     }
-    _this.settings.beforeOpenCallback()
+    _this.settings.beforeOpenCallback && _this.settings.beforeOpenCallback()
     _this.addEvent(iframe, "load", function () {
       _loaded()
     })
@@ -204,7 +208,7 @@ export default class Print {
       })
     }
 
-    return `<head><title>${this.settings.popTitle}</title>${extraHead}${links}<style type="text/css">${style}</style></head>`
+    return `<head><title>${this.settings.title}</title>${extraHead}${links}<style type="text/css">${style}</style></head>`
   }
 
   getBody() {
