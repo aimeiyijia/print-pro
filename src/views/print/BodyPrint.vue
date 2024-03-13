@@ -9,7 +9,7 @@
     <div id="PrintContent">
       <QrcodeDemo></QrcodeDemo>
       <ElFormDemo></ElFormDemo>
-      <ImageComponent class="page-break"></ImageComponent>
+      <ImageComponent class="print-page-break"></ImageComponent>
     </div>
   </div>
 </template>

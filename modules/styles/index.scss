@@ -16,10 +16,10 @@
     color-adjust: exact;
   }
 
-  .page-break {
+  .print-page-break {
     page-break-before: always;
   }
-  .avoid-break {
+  .print-avoid-break {
     page-break-inside: avoid;
   }
 
@@ -42,6 +42,6 @@
   }
 
   div:last-child {
-    page-break-after: auto;
+    print-page-break-after: auto;
   }
 }
